@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#071a33">
+
+  <meta name="description" content="Sérgio Sotero Imóveis — Salvador + Litoral Norte. As melhores oportunidades em toda a Bahia. CRECI-BA 26015.">
+
+  <title>Sérgio Sotero Imóveis | Seu Sonho, Nosso Compromisso</title>
+
+ 
+
+  <style>
+
+    :root {
+
+      --navy: #071a33;
+
+      --navy-dark: #041225;
+
+      --gold: #d4af37;
+
+      --gold-light: #f0d77b;
+
+      --white: #ffffff;
+
+      --text: #172033;
+
+      --muted: #64748b;
+
+      --bg: #f5f7fb;
+
+      --line: #dbe2ea;
+
+      --green: #00bf3f;
+
+      --shadow: 0 18px 50px rgba(7,26,51,.25);
+
+      --radius: 16px;
+
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      background: var(--navy-dark);
+
+      color: var(--white);
+
+      line-height: 1.5;
+
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    img { display: block; width: 100%; height: auto; }
+
+    .container { width: min(1200px, 92%); margin: auto; }
+
+ 
+
+    /* Top Bar / Header */
+
+    header {
+
+      background: var(--navy-dark);
+
+      border-bottom: 1px solid rgba(212,175,55,.2);
+
+      padding: 18px 0;
+
+    }
+
+    .header-flex {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .brand-area {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+    }
+
+    .brand-logo {
+
+      font-weight: 900;
+
+      font-size: 1.25rem;
+
+      letter-spacing: .5px;
+
+      color: var(--white);
+
+    }
+
+    .brand-logo span {
+
+      display: block;
+
+      font-size: 0.65rem;
+
+      font-weight: 400;
+
+      letter-spacing: 2px;
+
+      color: var(--gold);
+
+      text-transform: uppercase;
+
+      margin-top: 2px;
+
+    }
+
+    .header-info {
+
+      display: flex;
+
+      gap: 30px;
+
+      align-items: center;
+
+      font-size: 0.9rem;
+
+      color: #e2e8f0;
+
+    }
+
+    .header-info div strong {
+
+      display: block;
+
+      color: var(--gold-light);
+
+      font-size: 0.82rem;
+
+    }
+
+ 
+
+    /* Hero Section with Form Grid */
+
+    .hero {
+
+      position: relative;
+
+      background: linear-gradient(180deg, rgba(7,26,51,.85) 0%, rgba(4,18,37,.95) 100%),
+
+        url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=85") center/cover;
+
+      padding: 50px 0 80px;
+
+    }
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.1fr 0.9fr;
+
+      gap: 40px;
+
+      align-items: center;
+
+    }
+
+    .hero-text h1 {
+
+      font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+
+      line-height: 1.08;
+
+      margin-bottom: 20px;
+
+      color: var(--white);
+
+    }
+
+    .hero-text h1 span {
+
+      display: block;
+
+      color: var(--gold-light);
+
+      font-style: italic;
+
+      font-family: Georgia, serif;
+
+      font-weight: normal;
+
+      font-size: 0.85em;
+
+      margin-top: 5px;
+
+    }
+
+    .hero-text p {
+
+      font-size: 1.05rem;
+
+      color: #cbd5e1;
+
+      margin-bottom: 30px;
+
+    }
+
+    .category-icons {
+
+      display: grid;
+
+      grid-template-columns: repeat(5, 1fr);
+
+      gap: 12px;
+
+      margin-top: 25px;
+
+    }
+
+    .cat-badge {
+
+      background: rgba(255,255,255,0.06);
+
+      border: 1px solid rgba(255,255,255,0.12);
+
+      border-radius: 12px;
+
+      padding: 12px 8px;
+
+      text-align: center;
+
+      font-size: 0.78rem;
+
+      font-weight: 700;
+
+    }
+
+    .cat-badge span {
+
+      display: block;
+
+      font-size: 1.2rem;
+
+      margin-bottom: 5px;
+
+    }
+
+ 
+
+    /* Lead Form Card */
+
+    .lead-box {
+
+      background: var(--navy);
+
+      border: 1px solid rgba(212,175,55,0.3);
+
+      border-radius: var(--radius);
+
+      padding: 30px;
+
+      box-shadow: var(--shadow);
+
+    }
+
+    .lead-box h3 {
+
+      font-size: 1.35rem;
+
+      margin-bottom: 8px;
+
+      color: var(--white);
+
+      text-align: center;
+
+    }
+
+    .lead-box p.sub {
+
+      font-size: 0.82rem;
+
+      color: #94a3b8;
+
+      text-align: center;
+
+      margin-bottom: 22px;
+
+    }
+
+    .lead-form {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+
+    }
+
+    .lead-form input, .lead-form select {
+
+      width: 100%;
+
+      height: 46px;
+
+      background: var(--white);
+
+      border: 1px solid var(--line);
+
+      border-radius: 10px;
+
+      padding: 0 14px;
+
+      color: var(--text);
+
+      font-size: 0.95rem;
+
+      outline: none;
+
+    }
+
+    .lead-form input:focus, .lead-form select:focus {
+
+      border-color: var(--gold);
+
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.2);
+
+    }
+
+    .btn-submit {
+
+      background: var(--green);
+
+      color: #03230c;
+
+      font-weight: 800;
+
+      height: 52px;
+
+      border: none;
+
+      border-radius: 10px;
+
+      font-size: 0.98rem;
+
+      cursor: pointer;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      margin-top: 5px;
+
+      transition: opacity .2s;
+
+    }
+
+    .btn-submit:hover { opacity: 0.93; }
+
+    .secure-note {
+
+      text-align: center;
+
+      font-size: 0.73rem;
+
+      color: #94a3b8;
+
+      margin-top: 10px;
+
+    }
+
+ 
+
+    /* Gallery / Types Section */
+
+    section { padding: 70px 0; background: var(--bg); color: var(--text); }
+
+    .section-title {
+
+      text-align: center;
+
+      margin-bottom: 40px;
+
+    }
+
+    .section-title h2 {
+
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+
+      color: var(--navy);
+
+    }
+
+    .property-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(5, 1fr);
+
+      gap: 16px;
+
+    }
+
+    .prop-card {
+
+      background: var(--white);
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+
+      box-shadow: 0 10px 25px rgba(7,26,51,.06);
+
+      transition: transform .3s;
+
+    }
+
+    .prop-card:hover { transform: translateY(-5px); }
+
+    .prop-card img { height: 180px; object-fit: cover; }
+
+    .prop-card-content { padding: 18px 14px; text-align: center; }
+
+    .prop-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 6px; }
+
+    .prop-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.35; }
+
+ 
+
+    /* Trust / Benefits Banner */
+
+    .benefits {
+
+      background: var(--white);
+
+      padding: 50px 0;
+
+      border-top: 1px solid var(--line);
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+    .benefits-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(5, 1fr);
+
+      gap: 20px;
+
+      text-align: center;
+
+    }
+
+    .benefit-item h4 {
+
+      font-size: 0.92rem;
+
+      color: var(--navy);
+
+      margin-top: 10px;
+
+    }
+
+ 
+
+    /* Footer */
+
+    footer {
+
+      background: var(--navy-dark);
+
+      color: #94a3b8;
+
+      padding: 40px 0;
+
+      border-top: 1px solid rgba(255,255,255,0.08);
+
+    }
+
+    .footer-flex {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 20px;
+
+    }
+
+    .footer-flex strong { color: var(--white); font-size: 1.1rem; }
+
+    .creci-tag { color: var(--gold-light); font-size: 0.85rem; margin-top: 4px; }
+
+    .qr-side { text-align: center; font-size: 0.75rem; }
+
+    .qr-side img { width: 90px; height: 90px; margin-bottom: 5px; border-radius: 6px; }
+
+ 
+
+    /* Float WhatsApp */
+
+    .float-wa {
+
+      position: fixed; right: 20px; bottom: 20px; z-index: 999;
+
+      background: var(--green); color: #fff; width: 60px; height: 60px;
+
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+
+      font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+    }
+
+ 
+
+    @media(max-width: 950px) {
+
+      .hero-grid { grid-template-columns: 1fr; }
+
+      .property-grid, .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .category-icons { grid-template-columns: repeat(3, 1fr); }
+
+    }
+
+    @media(max-width: 600px) {
+
+      .property-grid, .benefits-grid, .category-icons { grid-template-columns: 1fr; }
+
+      .header-info { display: none; }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+ 
+
+  <header>
+
+    <div class="container header-flex">
+
+      <div class="brand-area">
+
+        <div class="brand-logo">
+
+          SÉRGIO SOTERO IMÓVEIS
+
+          <span>Seu Sonho, Nosso Compromisso</span>
+
+        </div>
+
+      </div>
+
+      <div class="header-info">
+
+        <div>
+
+          <strong>Salvador + Litoral Norte</strong>
+
+          As melhores oportunidades em toda a Bahia
+
+        </div>
+
+        <div>
+
+          <strong>CRECI-BA 26015</strong>
+
+          Corretor de Imóveis
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+ 
+
+  <main class="hero" id="inicio">
+
+    <div class="container hero-grid">
+
+      <div class="hero-text">
+
+        <h1>VAMOS REALIZAR O SEU SONHO DA CASA PRÓPRIA <span>Agora!</span></h1>
+
+        <p>Seu novo capítulo pode começar hoje. Conte com quem entende de pessoas e de imóveis.</p>
+
+        
+
+        <div class="category-icons">
+
+          <div class="cat-badge"><span>?&#0;</span>Casas</div>
+
+          <div class="cat-badge"><span>?&#0;</span>Apartamentos</div>
+
+          <div class="cat-badge"><span>?&#0;</span>Fazendas</div>
+
+          <div class="cat-badge"><span>?&#0;️</span>Prédios</div>
+
+          <div class="cat-badge"><span>?&#0;</span>Salas Comerciais</div>
+
+        </div>
+
+      </div>
+
+ 
+
+      <div class="lead-box" id="cadastro">
+
+        <h3>QUERO RECEBER MAIS INFORMAÇÕES</h3>
+
+        <p class="sub">Preencha os dados abaixo e fale comigo no WhatsApp.</p>
+
+        
+
+        <form class="lead-form" id="leadForm">
+
+          <input type="text" id="nome" placeholder="Nome completo" required>
+
+          <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
+
+          <input type="text" id="bairro" placeholder="Bairro" required>
+
+          
+
+          <select id="tipo" required>
+
+            <option value="">Tipo de imóvel</option>
+
+            <option>Casa</option>
+
+            <option>Apartamento</option>
+
+            <option>Fazenda</option>
+
+            <option>Prédio</option>
+
+            <option>Sala Comercial</option>
+
+          </select>
+
+ 
+
+          <select id="quartos" required>
+
+            <option value="">Quantidade de quartos</option>
+
+            <option>1 Quarto</option>
+
+            <option>2 Quartos</option>
+
+            <option>3 Quartos</option>
+
+            <option>4+ Quartos</option>
+
+          </select>
+
+ 
+
+          <input type="text" id="renda" placeholder="Renda mensal" required>
+
+          <input type="text" id="parcela" placeholder="Valor da Parcela">
+
+          <input type="text" id="valor" placeholder="Valor desejado do imóvel" required>
+
+ 
+
+          <select id="forma" required>
+
+            <option value="">Forma de compra</option>
+
+            <option>Financiado</option>
+
+            <option>À vista</option>
+
+            <option>Consórcio</option>
+
+            <option>Financiado + Recursos Próprios</option>
+
+          </select>
+
+ 
+
+          <button type="submit" class="btn-submit">
+
+            <span>?&#0;</span> QUERO FALAR AGORA NO WHATSAPP<br>71 99655-6451
+
+          </button>
+
+          <div class="secure-note">?&#0; Seus dados estão seguros.</div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </main>
+
+ 
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Conheça as Oportunidades</h2>
+
+      </div>
+
+      <div class="property-grid">
+
+        <article class="prop-card">
+
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=85" alt="Casas">
+
+          <div class="prop-card-content">
+
+            <h3>CASAS</h3>
+
+            <p>Conforto e qualidade de vida para sua família.</p>
+
+          </div>
+
+        </article>
+
+        <article class="prop-card">
+
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=85" alt="Apartamentos">
+
+          <div class="prop-card-content">
+
+            <h3>APARTAMENTOS</h3>
+
+            <p>Praticidade, segurança e ótima localização.</p>
+
+          </div>
+
+        </article>
+
+        <article class="prop-card">
+
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=85" alt="Fazendas">
+
+          <div class="prop-card-content">
+
+            <h3>FAZENDAS</h3>
+
+            <p>Investimento e lazer no campo.</p>
+
+          </div>
+
+        </article>
+
+        <article class="prop-card">
+
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=85" alt="Prédios">
+
+          <div class="prop-card-content">
+
+            <h3>PRÉDIOS</h3>
+
+            <p>Valorização e renda para o seu futuro.</p>
+
+          </div>
+
+        </article>
+
+        <article class="prop-card">
+
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=85" alt="Salas Comerciais">
+
+          <div class="prop-card-content">
+
+            <h3>SALAS COMERCIAIS</h3>
+
+            <p>O espaço ideal para o seu negócio.</p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <div class="benefits">
+
+    <div class="container benefits-grid">
+
+      <div class="benefit-item">
+
+        <div style="font-size: 2rem;">?&#0;</div>
+
+        <h4>Atendimento personalizado</h4>
+
+      </div>
+
+      <div class="benefit-item">
+
+        <div style="font-size: 2rem;">?&#0;️</div>
+
+        <h4>Segurança em todo o processo</h4>
+
+      </div>
+
+      <div class="benefit-item">
+
+        <div style="font-size: 2rem;">?&#0;</div>
+
+        <h4>Ampla oferta de imóveis</h4>
+
+      </div>
+
+      <div class="benefit-item">
+
+        <div style="font-size: 2rem;">?&#0;</div>
+
+        <h4>Negociação transparente</h4>
+
+      </div>
+
+      <div class="benefit-item">
+
+        <div style="font-size: 2rem;">⭐</div>
+
+        <h4>Experiência e credibilidade</h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ 
+
+  <footer>
+
+    <div class="container footer-flex">
+
+      <div>
+
+        <strong>Sérgio Sotero Imóveis</strong>
+
+        <div class="creci-tag">CRECI-BA 26015 • Corretor de Imóveis</div>
+
+        <div style="font-size: 0.8rem; margin-top: 5px; color: #64748b;">Salvador + Litoral Norte | sergiosotero.corretor@gmail.com</div>
+
+      </div>
+
+      <div class="qr-side">
+
+        <img id="qrCodeImg" alt="QR Code">
+
+        <div>Aponte a câmera e acesse</div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+ 
+
+  <a class="float-wa" href="https://wa.me/5571996556451" target="_blank" rel="noopener">?&#0;</a>
+
+ 
+
+  <script>
+
+    document.getElementById("leadForm").addEventListener("submit", function(e){
+
+      e.preventDefault();
+
+      const n = document.getElementById("nome").value;
+
+      const t = document.getElementById("telefone").value;
+
+      const b = document.getElementById("bairro").value;
+
+      const tp = document.getElementById("tipo").value;
+
+      const q = document.getElementById("quartos").value;
+
+      const r = document.getElementById("renda").value;
+
+      const p = document.getElementById("parcela").value;
+
+      const v = document.getElementById("valor").value;
+
+      const f = document.getElementById("forma").value;
+
+ 
+
+      const msg = `Olá, Sérgio! Quero receber mais informações.\n\n*Nome:* ${n}\n*WhatsApp:* ${t}\n*Bairro:* ${b}\n*Tipo:* ${tp}\n*Quartos:* ${q}\n*Renda:* ${r}\n*Parcela:* ${p || 'Não informada'}\n*Valor Desejado:* ${v}\n*Forma de Compra:* ${f}`;
+
+      window.open(`https://wa.me/5571996556451?text=${encodeURIComponent(msg)}`, '_blank');
+
+    });
+
+ 
+
+    document.getElementById("qrCodeImg").src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(window.location.href);
+
+  </script>
+
+</body>
+
+</html>
+
+ 
